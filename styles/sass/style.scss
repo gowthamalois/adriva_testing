@@ -1,0 +1,1458 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Theme Name:     Consoel - Consulting Business Next Template
+Version:        1.0.0
+-------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+1. General
+	1.1 Theme Reset Style
+	1.2 Global Elements
+
+2. header
+	2.1 topbar
+	2.2 navigation
+
+3. content
+	3.1 wpo-hero-slider
+	3.2 wpo-about-sections
+	3.3 wpo-service-section
+	3.4 wpo-cta-section
+	3.5 wpo-fun-fact-section
+	3.6 wpo-team-section
+	3.7 wpo-project-section
+	3.8 wpo-project-section
+	3.9 wpo-blog-area
+	3.10 partners-section
+	3.11 contact-info-section
+
+4. wpo-footer
+
+5. Home-style-3
+   5.1 wpo-features-section
+   5.2 wpo-service-section-s2
+   5.3 wpo-about-section-s2
+   5.4 wpo-skill-section
+   5.5 wpo-fun-fact-section-s2
+   5.6 wpo-team-section-s2
+   5.7 wpo-subscribe-section
+   5.8 wpo-project-section-s2
+   5.9 wpo-testimonial-section-s2
+   5.10 wpo-blog-area-s2
+   5.11 partners-section-s2
+
+6. Home-style-4
+   6.1 wpo-about-section
+
+7. Home-style-6
+   7.1 wpo-service-section-s3
+
+8. Home-style-7
+   8.1 wpo-about-section-s3
+   8.2 wpo-service-section-s4
+   8.3 wpo-skill-section-s2
+   8.4 wpo-team-section-s3
+   8.5 wpo-project-section-s3
+   8.6 wpo-testimonial-section-s3
+   8.7 wpo-subscribe-section-s2
+
+9. About Page
+   9.1 wpo-mission-vission-section
+   9.2 wpo-about-section-s4
+
+10. wpo-service-single
+
+11. project Page
+
+12. wpo-project-single
+
+13. wpo-faq-page
+
+14. wpo-pricing-page
+
+15. wpo-cart-page-style
+
+16. wpo-checkout-page-style
+
+17. wpo-shop-page
+
+18. wpo-service-single
+
+19. wpo-blog-pg-section
+
+20. wpo-blog-single-section
+
+21. wpo-contact-pg-section
+
+22. error-404-section
+
+23. wpo-team-single
+
+----------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+1. General
+----------------------------------------------------------------*/
+
+// helpers
+
+@import "helpers/variables";
+@import "helpers/mixins";
+
+// base
+@import "base/base";
+
+// components
+@import "components/section-title";
+@import "components/buttons";
+@import "components/form";
+// @import "components/social-links";
+@import "components/page-title";
+// @import "components/blog-sidebar";
+// @import "components/pagination";
+
+// layout
+@import "layout/header";
+@import "layout/hero-slider";
+// @import "layout/footer";
+
+// components
+@import "components/sticky-header";
+
+// page
+@import "page/home-default";
+
+// @import "page/home-style-3";
+
+// @import "page/home-style-4";
+
+// @import "page/home-style-6";
+
+@import "page/home-style-7";
+
+@import "page/about";
+
+@import "page/service-single";
+
+// @import "page/project";
+
+// @import "page/project-single";
+
+// @import "page/faq";
+
+// @import "page/pricing";
+
+// @import "page/_cart";
+// @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+// @import "page/_checkout";
+
+// @import "page/_shop";
+
+@import "page/_shop-single";
+
+// @import "page/_blog";
+
+// @import "page/_blog-single";
+
+@import "page/_contact";
+
+@import "page/_error-404";
+
+// @import "page/_team-single";
+
+// @import "page/_auth.scss";
+.contact-hover {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.contact-hover:hover i,
+.contact-hover:hover p,
+.contact-hover:hover {
+  color: #ea6a20 !important;
+}
+.aboutimg1 {
+  width: 45%;
+  @include media-query(1024px) {
+    width: 48%;
+  }
+  @include media-query(320px) {
+    width: 48%;
+  }
+
+  @include media-query(768px) {
+    width: 49%;
+  }
+  @include media-query(430px) {
+    width: 48%;
+  }
+  @include media-query(430px) {
+    width: 46%;
+  }
+}
+.section-padding {
+  @include media-query(1440px) {
+    padding: 0 0 0 0;
+  }
+  @include media-query(1024px) {
+    padding: 0;
+  }
+}
+.sectionabout {
+  @include media-query(320px) {
+    width: 90% !important;
+  }
+  @include media-query(1920px) {
+    padding-top: 100px;
+  }
+  @include media-query(1440px) {
+    padding: 140px 0 70px 0;
+  }
+  @include media-query(1024px) {
+    padding: 70px 0;
+  }
+  @include media-query(430px) {
+    padding: 50px 0;
+  }
+}
+.reviews {
+  &:before {
+    @include media-query(1440px) {
+      top: -11%;
+      font-size: 120px;
+    }
+    @include media-query(1024px) {
+      top: -10%;
+      font-size: 100px;
+    }
+    @include media-query(768px) {
+      top: -6%;
+      font-size: 68px;
+    }
+    @include media-query(430px) {
+      top: -5%;
+      font-size: 50px;
+    }
+    @include media-query(375px) {
+      top: -2%;
+      font-size: 40px;
+    }
+    @include media-query(320px) {
+      top: -2%;
+      font-size: 30px;
+    }
+  }
+}
+.homepagecontact {
+  @include media-query(430px) {
+    gap: 50px;
+  }
+}
+.whyimages {
+  @include media-query(1440px) {
+    width: 50px;
+    height: 55px;
+  }
+  @include media-query(1024px) {
+    height: 50px;
+  }
+  @include media-query(768px) {
+    height: 40px;
+  }
+  @include media-query(430px) {
+    height: 50px;
+  }
+}
+.adrivaheading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+
+  color: #242424;
+  font-weight: 550;
+}
+.adrivadesc {
+  font-size: 17px;
+  font-family: "Lato", sans-serif;
+  color: #797979;
+  line-height: 26px;
+  @include media-query(1024px) {
+    font-size: 17px;
+  }
+  @include media-query(430px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.servicescontainer {
+  @include media-query(430px) {
+    margin-top: 30px !important;
+  }
+}
+.contact-icon {
+  font-size: 20px;
+}
+.aboutImages {
+  @include media-query(1440px) {
+    gap: 20px !important;
+  }
+  @include media-query(1024px) {
+    height: 414px;
+  }
+  @include media-query(853px) {
+    height: 492px;
+  }
+  @include media-query(768px) {
+    height: 315px;
+  }
+  @include media-query(430px) {
+    height: auto;
+  }
+  @include media-query(375px) {
+    gap: 0;
+  }
+}
+.header_top_component {
+  @include media-query(1920px) {
+    width: 88%;
+  }
+  @include media-query(1024px) {
+    width: 88%;
+  }
+  @include media-query(768px) {
+    width: 90%;
+  }
+}
+.whyadrivadesc {
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  color: #ffff;
+  font-weight: 300;
+  @include media-query(768px) {
+    font-size: 18px;
+  }
+}
+.whyadrivadesc1 {
+  font: 400 17px / 28px "Lato", sans-serif;
+  color: #e6e6e6;
+  padding: 13px 0px 28px;
+}
+.serviceheading {
+  font-family: "Montserrat", sans-serif;
+  color: #242424;
+  text-align: center;
+  font-size: 36px;
+  @include media-query(1024px) {
+    font-size: 36px;
+  }
+  @include media-query(768px) {
+    font-size: 35px;
+  }
+  @include media-query(430px) {
+    font-size: 25px;
+  }
+  &:after {
+    margin: auto;
+    width: 13%;
+
+    @include media-query(430px) {
+      width: 30%;
+    }
+  }
+}
+.ourservicesinside {
+  @include media-query(1440px) {
+    width: 87% !important;
+  }
+}
+.overlay-text {
+  font-family: "Montserrat", sans-serif;
+}
+.servicetext {
+  font-family: "Montserrat", sans-serif;
+  gap: 30px;
+  text-align: center;
+  @include media-query(1440px) {
+    font-size: 20px;
+  }
+  @include media-query(1040px) {
+    font-size: 15px;
+  }
+}
+.staticscontainer {
+  @include media-query(1024px) {
+    padding: 100px 50px;
+  }
+  @include media-query(430px) {
+    padding: 100px 24px;
+  }
+}
+.companyname {
+  font-size: 16px;
+
+  @include media-query(430px) {
+    font-size: 15px;
+  }
+}
+.servicesboxes {
+  gap: 25px !important;
+  @include media-query(768px) {
+    gap: 30px !important;
+  }
+}
+.servicesboxes {
+  width: 100% !important;
+  .services {
+    width: 98%;
+    margin-right: 20px;
+    @include media-query(768px) {
+      width: 99%;
+      margin-right: 10px;
+    }
+  }
+}
+.container {
+  max-width: none !important;
+}
+.servicescontainer {
+  // @include media-query(321px) {
+  //   margin-top: 0 !important;
+  // }
+}
+.staticsheading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #fff;
+  @include media-query(375px) {
+    font-size: 25px;
+  }
+}
+.statticsp {
+  @include media-query(375px) {
+    font-size: 15px;
+  }
+}
+.staticsbox {
+  width: auto;
+  flex-wrap: wrap;
+  gap: 100px;
+  @include media-query(1444px) {
+    gap: 50px;
+  }
+  @include media-query(320px) {
+    gap: 20px !important;
+  }
+  @include media-query(375px) {
+    gap: 20px;
+  }
+}
+.staticsvalue,
+.statticstext {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+.statticstext {
+  @include media-query(1024px) {
+    font-size: 14px;
+  }
+}
+.staticssingle {
+  width: auto;
+  gap: 0px;
+}
+.reviewcontent {
+  @include media-query(1024px) {
+    padding-top: 6px;
+    font-size: 18px;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 0.36px;
+    line-height: 30px;
+  }
+  @include media-query(320px) {
+    font-size: 14px;
+  }
+
+  @include media-query(430px) {
+    font-size: 19px;
+  }
+}
+.reviewcontent {
+  @include media-query(768px) {
+    height: 340px;
+  }
+
+  @include media-query(430px) {
+    height: 268px;
+  }
+}
+.custom-input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.disabledbox {
+  @include media-query(430px) {
+    display: none;
+  }
+}
+.footeritems {
+  li {
+    .footerheading {
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+    }
+    a {
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+      color: #797979 !important;
+      &:hover {
+        color: #ea6a20;
+      }
+    }
+    font-family: "Montserrat", sans-serif;
+    color: #797979 !important;
+  }
+
+  p {
+    color: #797979;
+    @include media-query(320px) {
+      font-size: 12px;
+    }
+  }
+}
+.footerheading,
+.footeremail,
+.advisorheading,
+.servicesboxh1,
+.contactusheader,
+.contactus-details,
+.contactus-header,
+.headingtext,
+.companyname,
+.signupbtn,
+.contactustext,
+.contactuscall,
+.callusfree {
+  font-family: "Montserrat", sans-serif;
+}
+.footeralign {
+  @include media-query(1024px) {
+    padding: 10px 0 0 0;
+  }
+  @include media-query(768px) {
+    padding: 0 !important;
+  }
+}
+.contactustext {
+  font-size: 20px;
+  @include media-query(1024px) {
+    font-size: 17px;
+  }
+}
+.contactuscall {
+  h3 {
+    strong {
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+    }
+    font-size: 35px;
+    @include media-query(768px) {
+      font-size: 30px;
+    }
+    @include media-query(390px) {
+      font-size: 29px;
+    }
+    @include media-query(344px) {
+      font-size: 27px;
+    }
+    @include media-query(320px) {
+      font-size: 26px;
+    }
+  }
+  @include media-query(320px) {
+    font-size: 20px;
+  }
+}
+.callusfree {
+  font-weight: 650;
+  @include media-query(1440px) {
+    font-size: 24px;
+  }
+  @include media-query(1024px) {
+    font-size: 23px;
+  }
+}
+.buttoncomponent {
+  font-family: "Lato", sans-serif;
+}
+.headingtext {
+  font-size: 35px;
+  font-weight: bold;
+  color: #00000a;
+  line-height: 45px;
+  padding-bottom: 20px;
+  @include media-query(1024px) {
+    font-size: 26px !important;
+  }
+  @include media-query(430px) {
+    font-size: 30px !important;
+  }
+}
+.footercompent {
+  @include media-query(1440px) {
+    padding: 60px 70px;
+  }
+  @include media-query(768px) {
+    padding: 60px;
+  }
+  @include media-query(430px) {
+    padding: 60px 40px;
+  }
+}
+.abouttext p {
+  font-size: 17px;
+  line-height: 28px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.34px;
+  color: #797979;
+  @include media-query(820px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  @include media-query(768px) {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+.videoimage1 {
+  width: 60px;
+  height: 60px;
+  @include media-query(320px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+.videobtn {
+  // @include media-query(1440px) {
+  //   top: 44%;
+  //   left: 72%;
+  // }
+  // @include media-query(1024px) {
+  //   top: 45%;
+  //   left: 72%;
+  // }
+  // @include media-query(768px) {
+  //   top: 65%;
+  //   left: 36%;
+  // }
+  // @include media-query(430px) {
+  //   top: 76%;
+  //   left: 41%;
+  // }
+  // @include media-query(375px) {
+  //   top: 77%;
+  //   left: 39%;
+  // }
+  // @include media-query(320px) {
+  //   top: 84%;
+  //   left: 41%;
+  // }
+}
+.whybox {
+  @include media-query(430px) {
+    padding: 20px 20px 0 20px;
+  }
+}
+.wpo-team-section-s3 {
+  @include media-query(1440px) {
+    padding: 50px 0;
+  }
+  @include media-query(768px) {
+    padding: 50px 0;
+  }
+  @include media-query(375px) {
+    padding: 50px 0 0px 0;
+  }
+}
+.advisorheading {
+  font-size: 36px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #242424;
+  display: inline-block;
+  position: relative;
+  @include media-query(375px) {
+    font-size: 28px;
+  }
+}
+.advisordesc {
+  font-size: 17px;
+  line-height: 26px;
+  text-align: center;
+  color: #797979;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.34px;
+  padding-top: 15px;
+  @include media-query(768px) {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+.mobile_slanted-bg {
+  @include media-query(375px) {
+    background: linear-gradient(135deg, transparent 27%, #ea6a20 0%);
+  }
+  @include media-query(430px) {
+    background: linear-gradient(135deg, transparent 23%, #ea6a20 0%);
+  }
+}
+.advisornames {
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #242424;
+  padding-top: 20px;
+  @include media-query(768px) {
+    padding-bottom: 10px;
+  }
+  @include media-query(375px) {
+    padding-bottom: 25px;
+  }
+}
+.subsscribebtn {
+  font-family: "Lato", sans-serif;
+
+  @include media-query(375px) {
+    font-size: 14px;
+  }
+  @include media-query(320px) {
+    font-size: 12px;
+  }
+}
+.footeremail {
+  @include media-query(320px) {
+    font-size: 10px;
+    padding: 8px 13px;
+  }
+}
+.teamscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  @include media-query(1444px) {
+    flex-direction: row;
+  }
+  width: 100%;
+  @include media-query(820px) {
+    flex-direction: column !important;
+  }
+  @include media-query(375px) {
+    gap: 0;
+  }
+  justify-content: center;
+}
+.teamsboxes {
+  width: 31%;
+  .wpo-team-item {
+    .wpo-team-img {
+      @include media-query(1440px) {
+        width: 100%;
+      }
+    }
+  }
+  @include media-query(1440px) {
+    width: 31%;
+  }
+  @include media-query(1024px) {
+    width: 30%;
+  }
+  @include media-query(820px) {
+    width: 30%;
+  }
+  @include media-query(768px) {
+    width: 47%;
+  }
+  @include media-query(430px) {
+    width: 100%;
+  }
+}
+.services_content {
+  @include media-query(1440px) {
+    font-size: 17px;
+  }
+  ul {
+    margin-left: 30px;
+    @include media-query(1024px) {
+      margin-left: 28px;
+    }
+    @include media-query(768px) {
+      margin-left: 25px;
+    }
+  }
+  li {
+    list-style-position: outside !important;
+  }
+  h2 strong {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    @include media-query(1440px) {
+      font-family: "Montserrat", sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+    }
+    @include media-query(768px) {
+      font-size: 30px;
+    }
+    @include media-query(320px) {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    font-family: "Lato", sans-serif;
+    @include media-query(768px) {
+      font-size: 15px;
+    }
+  }
+}
+.reviewcontent {
+  padding-top: 6px;
+  font-size: 18px;
+  color: #fff;
+  overflow-y: auto;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.36px;
+  line-height: 30px;
+
+  @include media-query(820px) {
+    font-size: 19px;
+    line-height: 22px;
+  }
+
+  @include media-query(768px) {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  @include media-query(430px) {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  @include media-query(415px) {
+    font-size: 19px;
+    line-height: 21px;
+  }
+
+  @include media-query(375px) {
+    font-size: 17px;
+    line-height: 20px;
+  }
+  @include media-query(360px) {
+    font-size: 16px;
+  }
+  @include media-query(344px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  @include media-query(320px) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+.aboutreviews {
+  font-size: 18px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding-bottom: 10px;
+  @include media-query(768px) {
+    font-size: 15px;
+  }
+  @include media-query(430px) {
+    font-size: 14px;
+  }
+}
+.contact_querry_area {
+  @include media-query(430px) {
+    background: none;
+  }
+}
+.reviewcontainer {
+  @include media-query(768px) {
+    padding: 50px 70px;
+  }
+  @include media-query(430px) {
+    padding: 50px;
+  }
+  @include media-query(320px) {
+    padding: 50px 40px;
+  }
+}
+.blogbox{
+  display: flex;
+  flex-direction: column;
+  transition: none !important;
+  width: 100%;
+  h1{
+    font-size: 16px;
+    transition: none !important;
+    font-family: "Montserrat", sans-serif;
+  }
+  p{
+    transition: none !important;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+  }
+  a{
+    transition: none !important;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ea6a20 !important;
+    cursor: pointer;
+  }
+}
+
+.jobdetailstitle{
+  font-family: "Montserrat", sans-serif;
+font-weight: 700;
+font-size: 20px;
+color: #00000a;
+}
+.jobdesc{
+  display: flex;
+  gap: 10px;
+  div{
+    font-family: "Montserrat", sans-serif;
+    padding: 20px;
+    border: 1px solid #66666642;
+    .jobdesc1{
+      font-size: 15px;
+      font-weight: 400;
+      color: #666;
+    }
+    .jobdesc2{
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+.blog{
+  width: 32%;
+  padding: 30px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Card-like shadow */
+    transform: translateY(-5px); /* Slight lift effect */
+ border-radius: 10px;
+ @include media-query(768px){
+  width: 48%;
+ }
+
+ @include media-query(450px){
+  width: 100%;
+ }
+}
+.jobdescheader{
+  font-size: 19px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+
+}
+.skills{
+  background-color: transparent;
+border: 1px solid #ea6a20;
+  color: #ea6a20;
+  width: max-content;
+  padding: 5px;
+  border-radius: 5px;
+}
+.skillsbox{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.facebookbtn{
+  background-color: #1877f2;
+  color: #fff;
+  width: max-content;
+  padding: 8px 5px;
+border-radius: 5px;
+cursor: pointer;
+
+}
+.linkdeinbtn{
+  background-color: #0077b5;
+  color: #fff;
+  width: max-content;
+  padding: 8px 5px;
+border-radius: 5px;
+cursor: pointer;
+}
+.sharebtnbox{
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+.pagination {
+  margin: 20px 0;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ea6a20;
+  color: #00000a;
+  background-color: transparent;
+  cursor: pointer;
+}
+.blogimage{
+  width: 100%;
+  min-height: 300px;
+  max-height: 500px;
+}
+.blogdetailsheader1{
+  font-family: "Montserrat", sans-serif;
+color: #ea6a20;
+font-size: 16px;
+font-weight: 600;
+
+}
+.blogdetailsheader2{
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+}
+.blogdetails{
+  padding: 50px 0;
+}
+
+.pagination button.active {
+  background-color: #ea6a20;
+  color: #fff;
+  border: none;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.blogheader{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+  }
+}
+.blogcontainer{
+  display: flex;
+  margin: 50px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.blogdetailsbox{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.blogcreated{
+  display: flex;
+  gap: 10px;
+}
+.blogdesc{
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.pagination .ellipsis {
+  padding: 8px 12px;
+  color: #666;
+}
+
+.footergap {
+  @include media-query(425px) {
+    gap: 25px;
+  }
+  .footeeboxes {
+    @include media-query(425px) {
+      gap: 15px;
+    }
+  }
+}
+.reviewcontent {
+  height: 224px;
+  overflow-y: auto;
+  @include media-query(430px) {
+    height: 199px;
+  }
+  @include media-query(412px) {
+    height: 240px !important;
+  }
+  @include media-query(375px) {
+    height: 230px;
+  }
+}
+.business_text h3 {
+  @include media-query(1024px) {
+    font-size: 35px;
+    line-height: 31px;
+  }
+  @include media-query(768px) {
+    font-size: 25px;
+    line-height: 26px;
+  }
+  @include media-query(430px) {
+    font-size: 15px;
+    line-height: 16px;
+  }
+  @include media-query(320px) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+.business_text p {
+  @include media-query(1024px) {
+    font-size: 24px;
+    padding: 11px 0px 13px 0px;
+  }
+  @include media-query(768px) {
+    font-size: 20px;
+  }
+  @include media-query(430px) {
+    padding: 6px 0px 0px 0px;
+    font-size: 15px;
+  }
+  @include media-query(320px) {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+.signupbtn {
+  @include media-query(430px) {
+    padding: 11px 15px;
+    font-size: 12px;
+  }
+  @include media-query(320px) {
+    font-size: 10px;
+  }
+}
+.keybenefits {
+  font: 600 24px / 30px "Montserrat", sans-serif;
+  color: #242424;
+  @include media-query(768px) {
+    font: 600 21px / 30px "Montserrat", sans-serif;
+  }
+  @include media-query(320px) {
+    font: 600 14px / 21px "Montserrat", sans-serif;
+  }
+}
+.servicesboxcolour {
+  background-color: #fafafa;
+  color: #797979;
+  .servicesbox_desc {
+    color: #797979;
+  }
+}
+.services_content {
+  blockquote {
+    font-family: "Lato", sans-serif;
+  }
+  p span {
+    font-family: "Lato", sans-serif;
+    font-size: 17px;
+    color: #808080 !important;
+    @include media-query(1024px) {
+      font-size: 16px;
+    }
+    @include media-query(768px) {
+      font-size: 16px;
+    }
+    @include media-query(320px) {
+      font-size: 12px;
+    }
+  }
+  ul li {
+    font-family: "Lato", sans-serif;
+    @include media-query(768px) {
+      font-size: 16px;
+    }
+    @include media-query(320px) {
+      font-size: 12px;
+    }
+  }
+  ul li::marker {
+    @include media-query(768px) {
+      font-size: 25px;
+    }
+    @include media-query(430px) {
+      font-size: 20px;
+    }
+  }
+}
+.companylogo {
+  cursor: pointer;
+}
+.serviceboxes {
+  @include media-query(320px) {
+    padding: 20px;
+  }
+}
+.faq-question {
+  font-family: "Lato", sans-serif;
+}
+.faq-answer {
+  p {
+    font-family: "Lato", sans-serif;
+    @include media-query(1440px) {
+      font-size: 16px;
+    }
+  }
+}
+.servicesboxh1 {
+  @include media-query(1024px) {
+    font-size: 18px;
+  }
+  @include media-query(375px) {
+    font-size: 15px;
+  }
+  @include media-query(344px) {
+    font-size: 16px;
+  }
+  @include media-query(320px) {
+    font-size: 14px;
+  }
+}
+.contactusheader {
+  @include media-query(1024px) {
+    font-size: 36px;
+  }
+  @include media-query(768px) {
+    font-size: 29px;
+  }
+  @include media-query(320px) {
+    font-size: 29px;
+  }
+}
+
+.breadgrum {
+  width: 90% !important;
+  @include media-query(1024px) {
+    width: 90% !important;
+  }
+  @include media-query(768px) {
+    width: 91% !important;
+  }
+  @include media-query(430px) {
+    width: 95% !important;
+  }
+  @include media-query(320px) {
+    width: 98% !important;
+  }
+}
+.navitems {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500 !important;
+}
+.faq-question {
+  color: black;
+  @include media-query(320px) {
+    font-size: 10px;
+  }
+  @include media-query(1440px) {
+    font-size: 17px;
+  }
+  @include media-query(768px) {
+    font-size: 14px;
+  }
+}
+.keybenefits {
+  @include media-query(1024px) {
+    padding: 30px 0px 0px 0px;
+  }
+}
+.servicesbox_desc {
+  font-family: "Lato", sans-serif;
+  // letter-spacing: 1px;
+  @include media-query(1024px) {
+    font-size: 16px;
+  }
+  @include media-query(768px) {
+    font-size: 13px;
+    // letter-spacing: 1px;
+  }
+  @include media-query(430px) {
+    font-size: 15px;
+  }
+}
+.servicecontactheader {
+  font-family: "Montserrat", sans-serif;
+  @include media-query(1024px) {
+    font-size: 24px;
+  }
+  @include media-query(768px) {
+    font-size: 19px;
+  }
+  @include media-query(320px) {
+    font-size: 14px;
+  }
+}
+.servicecontact {
+  a {
+    @include media-query(320px) {
+      font-size: 13px;
+    }
+  }
+}
+.freeinput {
+  @include media-query(320px) {
+    font-size: 10px;
+    padding: 7px;
+  }
+}
+.faq-container,
+.servicecontactcontainer {
+  @include media-query(1024px) {
+    padding: 60px 0;
+  }
+  @include media-query(1440px) {
+    padding: 60px 0px;
+  }
+  @include media-query(430px) {
+    padding: 20px 0;
+  }
+  @include media-query(320px) {
+    padding: 20px 0;
+  }
+}
+.service-content-container {
+  padding: 50px 0 47px 0;
+  @include media-query(1024px) {
+    padding: 50px 0 0 0;
+  }
+}
+.servicecontainer {
+  @include media-query(1024px) {
+    padding: 40px 0 0 0;
+  }
+  @include media-query(430px) {
+    padding: 0 0 40px 0;
+  }
+}
+.whycontainer {
+  height: 100%;
+  @include media-query(430px) {
+    gap: 0;
+  }
+}
+.whycontainer1 {
+  @include media-query(430px) {
+    width: 95%;
+    margin: 0 auto;
+  }
+  @include media-query(320px) {
+    padding: 0;
+  }
+}
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.page-title h2 {
+  @include media-query(1024px) {
+    font-size: 48px;
+  }
+  @include media-query(768px) {
+    font-size: 30px;
+  }
+
+  @include media-query(320px) {
+    font-size: 20px;
+  }
+}
+.contactus-details {
+  @include media-query(1024px) {
+    font-size: 16px;
+  }
+  @include media-query(320px) {
+    font-size: 12px;
+  }
+  @include media-query(768px) {
+    font-size: 15px;
+  }
+}
+.contactpagebox {
+  margin-top: 40px;
+  @include media-query(430px) {
+    margin-top: 20px;
+  }
+}
+.contactus-header {
+  margin: 0;
+  @include media-query(1024px) {
+    font-size: 14px;
+  }
+  @include media-query(320px) {
+    font-size: 17px;
+  }
+}
+.signupcomponent {
+  @include media-query(375px) {
+    width: 90% !important;
+  }
+}
+.logoimage,
+.slanted-bg {
+  height: 100px;
+  @include media-query(1024px) {
+    height: 80px !important;
+  }
+  @include media-query(768px) {
+    height: 70px !important;
+    width: 70px !important;
+  }
+  @include media-query(344px) {
+    height: 67px !important;
+    width: 60px !important;
+  }
+  @include media-query(430px) {
+    height: 60px !important;
+    width: 60px !important;
+  }
+}
+.mobile_slanted-bg {
+  @include media-query(768px) {
+    height: 70px;
+  }
+
+  @include media-query(430px) {
+    background: linear-gradient(135deg, transparent 20%, #ea6a20 0%);
+  }
+
+  @include media-query(375px) {
+    height: 68px;
+    background: linear-gradient(135deg, transparent 23%, #ea6a20 0%);
+  }
+  @include media-query(320px) {
+    background: linear-gradient(135deg, transparent 23%, #ea6a20 0%);
+  }
+  @include media-query(320px) {
+    height: 60px;
+  }
+}
+.logoimage {
+  width: 100px;
+  @include media-query(1024px) {
+    width: 80px !important;
+  }
+}

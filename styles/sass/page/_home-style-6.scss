@@ -1,0 +1,33 @@
+/*======================================
+7. Home-style-6
+ =======================================*/
+
+/* 7.1 wpo-service-section-s3 */
+
+.wpo-service-section-s3{
+    .wpo-service-slider-s2{
+        .wpo-service-item .wpo-service-text a{
+            display: none;
+
+            @media(max-width:1200px){
+                display: inline-block;
+            }
+        }
+
+        .owl-item{
+            &.center{
+                .grid{
+                    .wpo-service-item{
+                        .wpo-service-text a{
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+}
+
+
+

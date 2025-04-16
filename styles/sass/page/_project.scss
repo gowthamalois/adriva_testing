@@ -1,0 +1,47 @@
+/*=====================================================
+11. project Page
+======================================================*/
+.wpo-project-section-s4{
+  background: $white;
+  padding-bottom: 90px;
+
+  @media(max-width:991px){
+   padding-bottom: 60px;
+  }
+  @media(max-width:767px){
+   padding-bottom: 50px;
+  }
+
+  .wpo-project-container{
+      .grid{
+          margin-bottom: 30px;
+          &.active{
+              .wpo-project-item{
+                  &:before{
+                      height: 100%;
+                  }
+                .wpo-project-text{
+                    bottom: 0;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+          .wpo-project-text h3 {
+              @media(max-width:1400px){
+                font-size: 20px;
+              }
+          }
+          .wpo-project-text span {
+              @media(max-width:1400px){
+                font-size: 13px;
+              }
+          }
+      }
+  }
+}
+
+
+.border-bt{
+    border-bottom: 1px solid transparentize($white, .9);
+}

@@ -1,0 +1,48 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: [ubuntu-latest] # ubuntu-latest # self-hosted
+    env:
+      # PORT: 6007
+      NEXT_PUBLIC_API_URL: https://staging-demo-admin-hcms-api.akinolabs.com/service
+      NEXT_PUBLIC_COMPANY_ID: 67330ed87128df65b0442dz4
+      NEXT_PUBLIC_ALGORITHM: aes-256-cbc
+      NEXT_PUBLIC_IV_LENGTH: 16
+      NEXT_PUBLIC_SOCKETURL: https://staging-hcms-api.akinolabs.com
+      NEXT_PUBLIC_SECRET_KEY: mysecretkey1234567890abcdef
+      NEXT_PUBLIC_TOKEN: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzZjZDFlNTBmNTg3MTllYjQ2MDIyZSIsImlhdCI6MTczODczMDc4OH0.bqySIVR5t3ZTtax80JW1ks-vPHty0lnc8ZrDdWFd0P0
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies (if needed)
+        run: npm install --legacy-peer-deps
+
+      # - name: install Babel
+      #   run : npm install --save-dev --force @babel/plugin-proposal-private-property-in-object
+
+      - name: Set CI environment variable
+        run: echo "CI=false" >> $GITHUB_ENV
+
+      - name: Build project (optional step if you're compiling/building)
+        run: npm run build
+
+      - name: Sync files to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_BUCKET_NAME: "statging.adrivaservices.com"
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+        run: |
+          # aws s3 sync ./.next/ s3://$AWS_BUCKET_NAME/ --region $AWS_REGION --delete
+          # Navigate to the static output directory
+          cd dist
+          # Sync files to the S3 bucket
+          aws s3 sync . s3://$AWS_BUCKET_NAME/ --region $AWS_REGION --delete

@@ -1,0 +1,48 @@
+/*======================================
+6. Home-style-4
+ =======================================*/
+
+/* 6.1 wpo-about-section */
+
+.wpo-about-section{
+    .wpo-about-wrap{
+        .wpo-about-img{
+            .wpo-ab-img-2{
+                position: absolute;
+                right: 50px;
+                bottom: 50px;
+                border-radius: 50%;
+                border: 5px solid $white;
+                -webkit-animation: spineer 2s infinite;
+				animation: spineer 2s infinite;
+
+                img{
+                    border-radius: 50%; 
+
+                    @media(max-width:575px){
+                       max-width: 150px;
+                    }
+                    @media(max-width:400px){
+                       max-width: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.wpo-about-section-h4{
+        .wpo-about-wrap{
+            .wpo-about-img{
+                .wpo-ab-img-2{
+                    display: block;
+                }
+                .wpo-about-exprience{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
